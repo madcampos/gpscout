@@ -4,18 +4,15 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 import Vuetify from 'vuetify';
+import * as VueGoogleMaps from 'vue2-google-maps';
 import 'vuetify/dist/vuetify.min.css';
 
-Vue.use(Vuetify, {theme: {
-	primary: '#FF8A65',
-	secondary: '#FF7043',
-	accent: '#9CCC65',
-	error: '#F44336',
-	warning: '#ffeb3b',
-	info: '#2196f3',
-	success: '#4caf50'
-}});
-
+Vue.use(Vuetify);
+Vue.use(VueGoogleMaps, {
+	load: {
+		key: 'AIzaSyAGgDAQVtN3UAjjeyEAhXfHWSJKHA2uAdY'
+	}
+});
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
